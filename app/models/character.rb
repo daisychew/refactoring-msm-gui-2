@@ -11,14 +11,22 @@
 #
 class Character < ApplicationRecord
   belongs_to(:movie)
+  # def movie
+    # key = self.movie_id
 
-  def actor
-    key = self.actor_id
+    # matching_set = Movie.where({ :id => key})
 
-    matching_set = Actor.where({ :id => key })
+    # the_one = matching_set.at(0)
+  # end
+  
+  belongs_to(:actor)
+  # def actor
+    # key = self.actor_id
 
-    the_one = matching_set.at(0)
+    # matching_set = Actor.where({ :id => key })
 
-    return the_one
-  end
+    # the_one = matching_set.at(0)
+
+    # return the_one
+  # end
 end
